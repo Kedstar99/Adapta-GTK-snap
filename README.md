@@ -23,6 +23,7 @@ This snap is packaged from Tista500's <a href="https://github.com/adapta-project
 This theme makes use of icons created by Sam Hewitt which are licensed under CC-SA-4.0.
 
 Similarly, <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme">papirus icon themes</a> are provided by the Papirus team. It is under a GPL3.0 licence.
+
 </p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
@@ -33,7 +34,13 @@ Similarly, <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 
 ## Install
 
-    sudo snap install my-snap-name
+To install, simply run snapcraft to build the snap
+
+sudo snap install -devmod
+
+To connect the theme to an app simply run sudo snap connect [other snap]:gtk-3-themes adapta-theme:gtk3-themes sudo snap connect [other snap]:icon-themes adapta-theme:icon-themes
+
+It should now use the theme by default
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
@@ -52,12 +59,12 @@ upstream so [Project] can authoritatively publish future releases.
 
   - [x] Fork the [Snapcrafters template](https://github.com/snapcrafters/fork-and-rename-me) repository to your own GitHub account.
     - If you have already forked the Snapcrafter template to your account and want to create another snap, you'll need to use GitHub's [Import repository](https://github.com/new/import) feature because you can only fork a repository once.
-  - [ ] Rename the forked Snapcrafters template repository
-  - [ ] Update the description of the repository
-  - [ ] Update logos and references to `[Project]` and `[my-snap-name]`
-  - [ ] Create a snap that runs in `devmode`
-  - [ ] Register the snap in the store, **using the preferred upstream name**
-  - [ ] Add a screenshot to this `README.md`
+  - [x] Rename the forked Snapcrafters template repository
+  - [x] Update the description of the repository
+  - [x] Update logos and references to `[Project]` and `[my-snap-name]`
+  - [x] Create a snap that runs in `devmode`
+  - [x] Register the snap in the store, **using the preferred upstream name**
+  - [x] Add a screenshot to this `README.md`
   - [ ] Publish the `devmode` snap in the Snap store edge channel
   - [ ] Add install instructions to this `README.md`
   - [ ] Update snap store metadata, icons and screenshots
