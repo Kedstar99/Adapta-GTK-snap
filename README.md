@@ -36,9 +36,9 @@ Similarly, <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 
 To install, simply run snapcraft to build the snap
 
-sudo snap install -devmod
+sudo snap install adapta-gtk-snap -devmod
 
-To connect the theme to an app simply run sudo snap connect [other snap]:gtk-3-themes adapta-theme:gtk3-themes sudo snap connect [other snap]:icon-themes adapta-theme:icon-themes
+To connect the theme to an app simply run sudo snap connect [other snap]:gtk-3-themes adapta-gtk-snap:gtk3-themes sudo snap connect [other snap]:icon-themes adapta-gtk-snap:icon-themes
 
 It should now use the theme by default
 

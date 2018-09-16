@@ -1,4 +1,4 @@
-name: adapta-theme
+name: adapta-gtk-snap
 version: '0.1'
 architectures:
   - all
