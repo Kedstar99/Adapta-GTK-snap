@@ -1,11 +1,29 @@
 <h1 align="center">
-  <img src="https://avatars1.githubusercontent.com/u/29598503?v=3&s=256" alt="Project">
+  <img src="https://github.com/adapta-project/adapta-github-resources/raw/master/images/logo_thumb.png" alt="Project">
   <br />
-  [Project]
+  [Adapta-GTK-theme]
 </h1>
 
-<p align="center"><b>This is the snap for [Project]</b>, <i>"Single-line elevator pitch for your amazing snap"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
-distributions.</p>
+<p align="center"><b>This is the snap for [Adapta-GTK-theme]</b>, <i>"An adaptive Gtk+ theme based on Material Design Guidelines."</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
+distributions.
+
+This snap contains multiple packages that are recommended for using the
+adapta theme in snaps. This includes roboto and noto sans fonts. These are
+the same fonts that are recommended when installing adapta-gtk-theme.
+
+In addition, this snap contains the papirus icon pack as this package
+contains useful adapta specific icons.
+
+This snap provides both Adapta and Adapta-Nokto themes. To see how to
+connect this snap to other packages please see the README in the source
+repository for the snap.
+
+Attributions:
+This snap is packaged from Tista500's <a href="https://github.com/adapta-project/adapta-gtk-theme">adapta-gtk-theme</a>. The theme is under a GPL2.0 licence.
+This theme makes use of icons created by Sam Hewitt which are licensed under CC-SA-4.0.
+
+Similarly, <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme">papirus icon themes</a> are provided by the Papirus team. It is under a GPL3.0 licence.
+</p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
