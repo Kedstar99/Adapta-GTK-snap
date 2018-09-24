@@ -32,15 +32,15 @@ slots:
     interface: content
     source:
       read:
-        - $SNAP/share/themes/Adapta
-        - $SNAP/share/themes/Adapta-Nokto
+        - $SNAP/data-dir/themes/Adapta
+        - $SNAP/data-dir/themes/Adapta-Nokto
 
   icon-themes:
     interface: content
     source:
       read:
-        - $SNAP/share/icons/Papirus-Adapta
-        - $SNAP/share/icons/Papirus-Adapta-Nokto
+        - $SNAP/data-dir/icons/Papirus-Adapta
+        - $SNAP/data-dir/icons/Papirus-Adapta-Nokto
 
 parts:
   adapta-theme:
