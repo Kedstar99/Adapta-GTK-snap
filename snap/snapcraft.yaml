@@ -3,7 +3,7 @@ version: '0.1'
 architectures:
   - all
 summary: "Adapta: An adaptive Gtk+ theme based on Material Design Guidelines."
-description: |
+description: '
   This snap contains multiple packages that are recommended for using the
   adapta theme in snaps. This includes roboto and noto sans fonts. These are
   the same fonts that are recommended when installing adapta-gtk-theme.
@@ -16,31 +16,30 @@ description: |
   repository for the snap.
 
   Attribution
-  This snap is packaged from Tista500's adapta-gtk-theme. It is licenced under a GPL2.0 licence
+  This snap is packaged from Tista500 adapta-gtk-theme. It is licenced under a GPL2.0 licence
   and can be found here.
     https://github.com/adapta-project/adapta-gtk-theme
   This theme makes use of icons created by Sam Hewitt which are licensed under CC-SA-4.0.
 
   Similarly, papirus icon themes are provided by the Papirus team. It is under a GPL3.0 licence.
-    https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+    https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
 
-grade: devel # must be 'stable' to release into candidate/stable channels
+grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
 
 slots:
-  gtk3-themes:
+  gtk-3-themes:
     interface: content
     source:
       read:
-        - $SNAP/data-dir/themes/Adapta
-        - $SNAP/data-dir/themes/Adapta-Nokto
-
+        - $SNAP/share/themes/Adapta
+        - $SNAP/share/themes/Adapta-Nokto
   icon-themes:
     interface: content
     source:
       read:
-        - $SNAP/data-dir/icons/Papirus-Adapta
-        - $SNAP/data-dir/icons/Papirus-Adapta-Nokto
+        - $SNAP/share/icons/Papirus-Adapta
+        - $SNAP/share/icons/Papirus-Adapta-Nokto
 
 parts:
   adapta-theme:

@@ -36,11 +36,22 @@ Similarly, <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 
 To install, simply run snapcraft to build the snap
 
-sudo snap install adapta-gtk-snap -devmod
+sudo snap install adapta-gtk-snap --edge
 
-To connect the theme to an app simply run sudo snap connect [other snap]:gtk-3-themes adapta-gtk-snap:gtk3-themes sudo snap connect [other snap]:icon-themes adapta-gtk-snap:icon-themes
+To connect the theme to an app simply run 
+sudo snap connect [other snap]:gtk-3-themes adapta-gtk-snap:gtk-3-themes 
+sudo snap connect [other snap]:icon-themes adapta-gtk-snap:icon-themes
 
-It should now use the theme by default
+Similarly, you need to specify which theme you want to use as an environment
+variable, preferrably in your ~/.bashrc file. To do so simply add the following
+lines to your bashrc file.
+
+GTK_THEME=Adapta-Nokto
+export GTK_THEME
+
+The theme should now apply by default to themes that are connected.
+NOTE: the gtk-3-themes plug isn't exposed for all snaps so this won't apply
+to all available snaps. I have only tested this on Thunderbird and LibreOffice.
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
