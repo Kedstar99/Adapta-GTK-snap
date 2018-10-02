@@ -1,5 +1,5 @@
 name: adapta-gtk-snap
-version: '0.1'
+version: '0.2'
 architectures:
   - all
 summary: "Adapta: An adaptive Gtk+ theme based on Material Design Guidelines."
@@ -33,11 +33,19 @@ slots:
     source:
       read:
         - $SNAP/share/themes/Adapta
+        - $SNAP/share/themes/Adapta-Brila
+        - $SNAP/share/themes/Adapta-Brila-Eta
+        - $SNAP/share/themes/Adapta-Eta
         - $SNAP/share/themes/Adapta-Nokto
+        - $SNAP/share/themes/Adapta-Nokto-Eta
   icon-themes:
     interface: content
     source:
       read:
+        - $SNAP/share/icons/ePapirus
+        - $SNAP/share/icons/Papirus
+        - $SNAP/share/icons/Papirus-Light
+        - $SNAP/share/icons/Papirus-Dark
         - $SNAP/share/icons/Papirus-Adapta
         - $SNAP/share/icons/Papirus-Adapta-Nokto
 
@@ -66,4 +74,8 @@ parts:
     stage:
       - share/icons/Papirus-Adapta
       - share/icons/Papirus-Adapta-Nokto
+      - share/icons/Papirus-Dark
+      - share/icons/Papirus-Light
+      - share/icons/Papirus
+      - share/icons/ePapirus
       - share/themes/*/gtk-3*
