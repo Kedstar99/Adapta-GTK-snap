@@ -33,8 +33,6 @@ slots:
     source:
       read:
         - $SNAP/share/themes/Adapta
-        - $SNAP/share/themes/Adapta-Brila
-        - $SNAP/share/themes/Adapta-Brila-Eta
         - $SNAP/share/themes/Adapta-Eta
         - $SNAP/share/themes/Adapta-Nokto
         - $SNAP/share/themes/Adapta-Nokto-Eta
