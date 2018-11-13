@@ -1,5 +1,5 @@
 name: adapta-gtk-snap
-version: '0.2'
+version: '0.3'
 architectures:
   - all
 summary: "Adapta: An adaptive Gtk+ theme based on Material Design Guidelines."
@@ -28,6 +28,14 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
 
 slots:
+  gtk-2-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/gtk2/Adapta
+        - $SNAP/share/gtk2/Adapta-Eta
+        - $SNAP/share/gtk2/Adapta-Nokto
+        - $SNAP/share/gtk2/Adapta-Nokto-Eta
   gtk-3-themes:
     interface: content
     source:
@@ -49,6 +57,7 @@ slots:
 
 parts:
   adapta-theme:
+    after: [utils]
     plugin: nil
     stage-packages:
       - adapta-gtk-theme
@@ -58,17 +67,11 @@ parts:
       - papirus-icon-theme
     build-packages:
       - gtk-update-icon-cache
-    install: |
-      set -eux
+    override-build: |
       snapcraftctl build
-      for dir in $SNAPCRAFT_PART_INSTALL/usr/share/icons/*/; do
-        if [ -f $dir/index.theme ]; then
-          gtk-update-icon-cache -q $dir
-        fi
-      done
-    organize:
-      usr/share/themes: share/themes
-      usr/share/icons: share/icons
+      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/usr/share/icons
+      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL/usr/share
+      mv  $SNAPCRAFT_PART_INSTALL/usr/share $SNAPCRAFT_PART_INSTALL/share
     stage:
       - share/icons/Papirus-Adapta
       - share/icons/Papirus-Adapta-Nokto
@@ -77,3 +80,13 @@ parts:
       - share/icons/Papirus
       - share/icons/ePapirus
       - share/themes/*/gtk-3*
+      - share/gtk2/*/gtk-2.0
+
+  utils:
+    plugin: dump
+    source: utils
+    prime:
+      - -*
+    build-packages:
+      - try: [gtk-update-icon-cache]
+      - else: [libgtk-3-bin]
